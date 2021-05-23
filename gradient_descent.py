@@ -1,7 +1,7 @@
 import numpy as np
 from autograd import grad
 
-def gradient_descent(f, x0, lr=1e-03, patience=10,  threshold=1e-05, final_lr=1e-07):
+def simple_gradient_descent(f, x0, lr=1e-03, patience=10,  threshold=1e-05, final_lr=1e-07):
     derivative_fn = grad(f)
     iter = 0
     min_fx = 1000000
